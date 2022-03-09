@@ -61,7 +61,7 @@ namespace Exercises
         {
             //TODO your code goes here
            //return numbers.Where(n => numbers.First() == n && numbers.Last()==  );
-           throw new NotImplementedException();
+           throw new NotImplementedException(); 
         }
 
         //Refactoring challenge
