@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercises
 {
@@ -29,7 +30,14 @@ namespace Exercises
         public static IEnumerable<string> AddStartAndEndMarkers(IEnumerable<string> words)
         {
             //TODO your code goes here
-            throw new NotImplementedException();
+            const string Start = "START";
+            const string End = "END";
+
+            var withStart = words.First() == Start ? words : words.Prepend(Start);
+
+            return withStart.Last() == End ?
+                withStart :
+                withStart.Append(End);
         }
 
         //Coding Exercise 2
@@ -52,7 +60,7 @@ namespace Exercises
             IEnumerable<int> numbers)
         {
             //TODO your code goes here
-            throw new NotImplementedException();
+           return numbers.Where(n => numbers.First() == n && numbers.Last()==  );
         }
 
         //Refactoring challenge

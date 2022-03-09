@@ -9,13 +9,13 @@ namespace LinqTutorial
         {
             //METHOD SYNTAX
 
-            //Any.Run();
-            //All.Run();
-            //Count.Run();
-            //Contains.Run();
-            //OrderBy.Run();
-            //MinMax.Run();
-            //Average.Run();
+            Any.Run();
+            All.Run();
+            Count.Run();
+            Contains.Run();
+            OrderBy.Run();
+            MinMax.Run();
+            Average.Run();
             //Sum.Run();
             //ElementAt.Run();
             //FirstLast.Run();

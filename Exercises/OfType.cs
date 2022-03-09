@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercises
 {
     public static class OfType
     {
+        public static Boolean WordsAreUpper(this IEnumerable<string> words)
+        {
+            return words.All(text => text.ToUpper() == text);
+        }
         //Coding Exercise 1
         //Implement the GetTheFirstInteger method, which given a collection of objects,
         //will return the first integer from this collection.
@@ -12,7 +17,9 @@ namespace Exercises
         public static int? GetTheFirstInteger(IEnumerable<object> objects)
         {
             //TODO your code goes here
-            throw new NotImplementedException();
+
+            return objects.OfType<int?>().FirstOrDefault();
+                       
         }
 
         //Coding Exercise 2
@@ -22,15 +29,15 @@ namespace Exercises
         public static bool AreAllStringsUpperCase(IEnumerable<object> objects)
         {
             //TODO your code goes here
-            throw new NotImplementedException();
+            var isupper = objects.OfType<string>().WordsAreUpper();
+            return  objects.OfType<string>().All(word => word.ToUpper() == word );
         }
-
         //Refactoring challenge
         //TODO implement this method
         public static DateTime? GetTheLatestDate_Refactored(IEnumerable<object> objects)
         {
             //TODO your code goes here
-            throw new NotImplementedException();
+            return objects.OfType<DateTime?>().Max();
         }
 
         //do not modify this method
