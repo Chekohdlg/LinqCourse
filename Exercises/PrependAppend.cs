@@ -60,7 +60,8 @@ namespace Exercises
             IEnumerable<int> numbers)
         {
             //TODO your code goes here
-           return numbers.Where(n => numbers.First() == n && numbers.Last()==  );
+           //return numbers.Where(n => numbers.First() == n && numbers.Last()==  );
+           throw new NotImplementedException();
         }
 
         //Refactoring challenge
